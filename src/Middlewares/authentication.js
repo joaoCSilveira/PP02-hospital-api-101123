@@ -31,6 +31,7 @@ const authPost = async(req, res, next) => {
     if(req.body.urgente === ""){
         res.status(400).json({message: "A urgencia deve ser diferente de inexistente!"})
     }
+    next()
 }
 module.exports = {
     authPost
